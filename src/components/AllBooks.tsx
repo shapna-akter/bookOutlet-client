@@ -48,7 +48,7 @@ const ALlBook = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl text-primary font-bold mb-4 text-center">
+      <h2 className="text-3xl text-info font-bold mb-4 text-center">
         Our All Book Outlet
       </h2>
 
@@ -103,7 +103,7 @@ const ALlBook = () => {
                 <div className="card bg-white shadow-xl image-full">
                   <figure>
                     <img
-                      src="https://thumbs.dreamstime.com/b/old-book-flying-letters-magic-light-background-bookshelf-library-ancient-books-as-symbol-knowledge-history-218640948.jpg"
+                      src="https://img.freepik.com/premium-photo/opened-book-with-flying-pages-butterflies-dark-backgroundgenerative-ai_391052-12859.jpg"
                       alt="Shoes"
                     />
                   </figure>
@@ -120,19 +120,19 @@ const ALlBook = () => {
                         <section className="grid grid-cols-3 lg:grid-cols-3 gap-3 text-sm font-medium">
                           <Link
                             to={`/bookDetails/${_id}`}
-                            className="py-2 bg-gray-200 text-purple-800 font-bold rounded-sm my-2 px-1"
+                            className="py-2 bg-gray-200 text-info font-bold rounded-sm my-2 px-1"
                           >
                             See Details
                           </Link>
                           <button
                             onClick={() => handleAddBook(book)}
-                            className="py-2 bg-gray-200 text-purple-800 font-bold my-2 px-1 rounded-sm"
+                            className="py-2 bg-gray-200 text-info font-bold my-2 px-1 rounded-sm"
                           >
                             Add Reading
                           </button>
                           <button
                             onClick={() => handleAddReaded(book)}
-                            className="py-2 bg-gray-200 text-purple-800 font-bold rounded-sm my-2 px-1"
+                            className="py-2 bg-gray-200 text-info font-bold rounded-sm my-2 px-1"
                           >
                             Add Finished
                           </button>
