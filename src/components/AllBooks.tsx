@@ -48,13 +48,13 @@ const ALlBook = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 max-w-5xl">
       <h2 className="text-3xl text-info font-bold mb-4 text-center">
         Our All Book Outlet
       </h2>
 
       <div className="flex flex-col lg:flex-row justify-between items-center mb-4">
-        <div className="flex flex-col items-center mb-4 w-full md:w-1/2 mt-16 lg:mt-0">
+        <div className="flex flex-col items-center mb-4 w-full md:w-1/2 lg:w-auto">
           <select
             name=""
             id=""
@@ -92,7 +92,7 @@ const ALlBook = () => {
         <Spinner></Spinner>
       )}
 
-      <div className="grid gap-5 lg:grid-cols-3 mt-5">
+      <div className="grid gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         {filteredBooks?.map((book, i) => {
           const { _id, title, author, genre, publicationDate } = book;
           return (
