@@ -1,6 +1,5 @@
-// import Swal from "sweetalert2";
+
 import {
-  // addToReaded,
   removeFromReaded,
 } from "../redux/features/readedBook/readedBookSlice";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
@@ -19,19 +18,16 @@ const ReadedBook = () => {
 
   const dispatch = useAppDispatch();
 
-  // const handleAddBook = (book: IBook) => {
-  //   dispatch(addToReaded(book));
-  // };
   const handleRemoveBook = (book: IBook) => {
     dispatch(removeFromReaded(book));
   };
-  // const handleRemoveOne = (book: IBook) => {
-  //   dispatch(removeOneReaded(book));
-  // };
 
   return (
-    <div className="">
-      <h2 className="text-center my-3 text-xl font-bold"> Finished book </h2>
+    <div className="py-8">
+      <h2 className="text-3xl text-primary font-bold mb-4 text-center">
+        {" "}
+        Finished book{" "}
+      </h2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         {books?.map((book: IBook) => (

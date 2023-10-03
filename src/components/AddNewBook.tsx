@@ -75,10 +75,10 @@ const AddBook = () => {
     navigate(-1);
   };
   return (
-    <div className="min-h-screen m-12">
-      <h3 className="text-center text-primary font-bold text-4xl my-2 font-serif ">
+    <div className="min-h-screen p-8">
+      <h2 className="text-3xl text-primary font-bold mb-4 text-center">
         Add A Book
-      </h3>
+      </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid grid-cols-2 gap-4">
           <div className="mb-4">
