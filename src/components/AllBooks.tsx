@@ -92,7 +92,7 @@ const ALlBook = () => {
         <Spinner></Spinner>
       )}
 
-      <div className="grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full mt-5">
+      <div className="grid gap-5 lg:grid-cols-3 mt-5">
         {filteredBooks?.map((book, i) => {
           const { _id, title, author, genre, publicationDate } = book;
           return (
