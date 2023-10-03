@@ -5,6 +5,7 @@ import { useGetAllBookQuery } from "../redux/features/book/bookApi";
 import { addToReaded } from "../redux/features/readedBook/readedBookSlice";
 import { addToWishlist } from "../redux/features/whislist/whislistSlice";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import Spinner from "../shared/Spinner";
 
 export interface IBook {
   _id?: string | any;
@@ -88,7 +89,7 @@ const ALlBook = () => {
       </div>
 
       {isLoading && (
-        <div className="text-xl font-bold text-center mb-4">Loading...</div>
+        <Spinner></Spinner>
       )}
 
       <div className="grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full mt-5">

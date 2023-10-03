@@ -4,6 +4,7 @@ import { usePostBookMutation } from "../redux/features/book/bookApi";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { setNotification } from "../redux/notification/notificationSlice";
 import { useNavigate } from "react-router-dom";
+import Spinner from "../shared/Spinner";
 export interface IBook {
   title: string;
   author: string;
@@ -63,9 +64,7 @@ const AddBook = () => {
 
   if (isLoading) {
     return (
-      <div className="mt-1 text-xl font-bold font-serif text-center flex justify-center items-center">
-        <h2 className="border-2 rounded-full p-3 w-fit ">Loading ........</h2>
-      </div>
+      <Spinner></Spinner>
     );
   }
   if (error) {

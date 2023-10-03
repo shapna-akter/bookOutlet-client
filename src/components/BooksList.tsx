@@ -7,6 +7,7 @@ import { useGetBookQuery } from "../redux/features/book/bookApi";
 import { addToReaded } from "../redux/features/readedBook/readedBookSlice";
 import { addToWishlist } from "../redux/features/whislist/whislistSlice";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import Spinner from "../shared/Spinner";
 
 interface IBook {
   _id?: string | any;
@@ -33,14 +34,11 @@ const Books = () => {
   };
 
   return (
-    <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-center">
-      <h2 className="mt-1 text-3xl font-bold font-serif">All New Books</h2>
-
-      {isLoading && (
-        <div className="mt-1 text-xl font-bold font-serif text-center flex justify-center items-center">
-          <h2 className=" border-2 p-2 w-fit ">Loading ......</h2>
-        </div>
-      )}
+    <div className="text-center py-8">
+      <h2 className="text-3xl text-primary font-bold mb-4 text-center">
+        All New Books
+      </h2>
+      {isLoading && <Spinner></Spinner>}
       <div className="grid  lg:grid-cols-3 gap-7 sm:max-w-sm sm:mx-auto lg:max-w-full mt-5">
         {books?.map((book, i) => {
           const { _id, title, author, genre, publicationDate } = book;
@@ -99,7 +97,7 @@ const Books = () => {
       <div className="mt-10">
         <Link
           to="/allBook"
-          className="block w-96 mt-10 lg:inline-block lg:mt-0 text-gray-100  mr-8 p-2 bg-info hover:text-purple-800 hover:bg-gray-300 hover:shadow-2xl hover:scale-110  mx-auto  font-bold text-xl "
+          className="text-base-100 bg-primary rounded-lg px-4 2xl:px-12 py-2 font-medium cursor-pointer hover:bg-neutral"
         >
           See All
         </Link>
