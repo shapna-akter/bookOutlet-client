@@ -93,7 +93,7 @@ const Navbar = () => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link
               to="/"
-              className="text-3xl font-bold text-black-800 font-serif"
+              className="text-3xl text-primary font-bold text-black-800 font-serif"
             >
               BooksOutlet
             </Link>
