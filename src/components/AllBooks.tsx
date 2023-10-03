@@ -104,7 +104,7 @@ const ALlBook = () => {
                   <figure>
                     <img
                       src="https://img.freepik.com/premium-photo/opened-book-with-flying-pages-butterflies-dark-backgroundgenerative-ai_391052-12859.jpg"
-                      alt="Shoes"
+                      alt="Book"
                     />
                   </figure>
                   <div className="card-body">
