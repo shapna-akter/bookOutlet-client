@@ -47,13 +47,117 @@ const ALlBook = () => {
   };
 
   return (
-    <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-center">
-      <h2 className="mt-1 text-3xl font-bold font-serif">
+    // <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-center">
+    //   <h2 className="mt-1 text-3xl font-bold font-serif">
+    //     Our All Book Outlet
+    //   </h2>
+
+    //   <section className="md:flex justify-between">
+    //     <div className="flex flex-col justify-center items-center mb-4">
+    //       <select
+    //         name=""
+    //         id=""
+    //         className="py-2 my-2 px-2 outline-none border-2"
+    //       >
+    //         <option value="" disabled>
+    //           Search Book
+    //         </option>
+    //         <option value="">Genre</option>
+    //         <option value="">Publication Year</option>
+    //       </select>
+    //       <div>
+    //         <input
+    //           type="text"
+    //           placeholder="Search with title,author,genre"
+    //           className="border border-gray-300 rounded py-2  px-2 mr-2"
+    //           value={searchTerm}
+    //           onChange={handleSearch}
+    //         />
+    //       </div>
+    //     </div>
+    //     <div className="flex justify-center items-center">
+    //       {user?.email && (
+    //         <Link
+    //           className="text-xl w-fit text-center font-bold bg-info text-slate-200 px-4 py-2 rounded-lg "
+    //           to="/addBook"
+    //         >
+    //           Add new
+    //         </Link>
+    //       )}
+    //     </div>
+    //   </section>
+
+    //   {isLoading && (
+    //     <div className="mt-1 text-xl font-bold font-serif text-center flex justify-center items-center">
+    //       <h2 className=" border-2 rounded-full p-3 w-fit ">
+    //         Loading ........
+    //       </h2>
+    //     </div>
+    //   )}
+
+    //   <div className="grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full mt-5">
+    //     {filteredBooks?.map((book, i) => {
+    //       const { _id, title, author, genre, publicationDate } = book;
+    //       return (
+    //         <div
+    //           key={i + 1}
+    //           className="flex flex-wrap -mx-4 shadow-md hover:shadow-2xl hover:scale-105 py-1 text-center"
+    //         >
+    //           <Link to={`/bookDetails/${_id}`} className="w-full  px-4 my-1 ">
+    //             <div className="card w-96 bg-base-100 shadow-xl image-full">
+    //               <figure>
+    //                 <img
+    //                   src="https://thumbs.dreamstime.com/b/old-book-flying-letters-magic-light-background-bookshelf-library-ancient-books-as-symbol-knowledge-history-218640948.jpg"
+    //                   alt="Shoes"
+    //                 />
+    //               </figure>
+    //               <div className="card-body">
+    //                 <div className="mx-auto text-center">
+    //                   <h2 className=" text-lg font-bold mb-2">{title}</h2>
+    //                   <p className="">{author}</p>
+    //                   <p className="">{genre}</p>
+    //                   <p className="">Publication Date: {publicationDate}</p>
+    //                 </div>
+
+    //                 <div className="card-actions justify-end">
+    //                   {user?.email && (
+    //                     <section className="mx-auto  grid grid-cols-3 lg:grid-cols-3 gap-3 text-sm font-medium">
+    //                       <Link
+    //                         to={`/bookDetails/${_id}`}
+    //                         className="py-2 bg-gray-200 text-purple-800 font-bold rounded-sm my-2 px-1"
+    //                       >
+    //                         See Details
+    //                       </Link>
+    //                       <button
+    //                         onClick={() => handleAddBook(book)}
+    //                         className="py-2 bg-gray-200 text-purple-800 font-bold  my-2 px-1 rounded-sm"
+    //                       >
+    //                         Add Reading
+    //                       </button>
+    //                       <button
+    //                         onClick={() => handleAddReaded(book)}
+    //                         className="py-2 bg-gray-200 text-purple-800 font-bold  rounded-sm my-2 px-1"
+    //                       >
+    //                         Add Finished
+    //                       </button>
+    //                     </section>
+    //                   )}
+    //                 </div>
+    //               </div>
+    //             </div>
+    //           </Link>
+    //         </div>
+    //       );
+    //     })}
+    //   </div>
+    // </div>
+    <div className="container mx-auto px-4 py-8">
+      <h2 className="text-3xl font-bold mb-4 text-center">
         Our All Book Outlet
       </h2>
 
-      <section className="md:flex justify-between">
-        <div className="flex flex-col justify-center items-center mb-4">
+      <div className="flex flex-col lg:flex-row justify-between items-center mb-4">
+        <div className="flex flex-col items-center mb-4 w-full md:w-1/2">
           <select
             name=""
             id=""
@@ -65,11 +169,11 @@ const ALlBook = () => {
             <option value="">Genre</option>
             <option value="">Publication Year</option>
           </select>
-          <div>
+          <div className="w-full md:w-3/4">
             <input
               type="text"
-              placeholder="Search with title,author,genre"
-              className="border border-gray-300 rounded py-2  px-2 mr-2"
+              placeholder="Search with title, author, genre"
+              className="w-full border border-gray-300 rounded py-2 px-2 mr-2"
               value={searchTerm}
               onChange={handleSearch}
             />
@@ -78,21 +182,17 @@ const ALlBook = () => {
         <div className="flex justify-center items-center">
           {user?.email && (
             <Link
-              className="text-xl w-fit text-center font-bold bg-info text-slate-200 px-4 py-2 rounded-lg "
+              className="text-xl text-center font-bold bg-info text-white px-4 py-2 rounded-lg"
               to="/addBook"
             >
               Add new
             </Link>
           )}
         </div>
-      </section>
+      </div>
 
       {isLoading && (
-        <div className="mt-1 text-xl font-bold font-serif text-center flex justify-center items-center">
-          <h2 className=" border-2 rounded-full p-3 w-fit ">
-            Loading ........
-          </h2>
-        </div>
+        <div className="text-xl font-bold text-center mb-4">Loading...</div>
       )}
 
       <div className="grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full mt-5">
@@ -103,8 +203,8 @@ const ALlBook = () => {
               key={i + 1}
               className="flex flex-wrap -mx-4 shadow-md hover:shadow-2xl hover:scale-105 py-1 text-center"
             >
-              <Link to={`/bookDetails/${_id}`} className="w-full  px-4 my-1 ">
-                <div className="card w-96 bg-base-100 shadow-xl image-full">
+              <Link to={`/bookDetails/${_id}`} className="w-full  px-4 my-1">
+                <div className="card bg-white shadow-xl image-full">
                   <figure>
                     <img
                       src="https://thumbs.dreamstime.com/b/old-book-flying-letters-magic-light-background-bookshelf-library-ancient-books-as-symbol-knowledge-history-218640948.jpg"
@@ -113,15 +213,15 @@ const ALlBook = () => {
                   </figure>
                   <div className="card-body">
                     <div className="mx-auto text-center">
-                      <h2 className=" text-lg font-bold mb-2">{title}</h2>
-                      <p className="">{author}</p>
-                      <p className="">{genre}</p>
-                      <p className="">Publication Date: {publicationDate}</p>
+                      <h2 className="text-lg font-bold mb-2">{title}</h2>
+                      <p>{author}</p>
+                      <p>{genre}</p>
+                      <p>Publication Date: {publicationDate}</p>
                     </div>
 
                     <div className="card-actions justify-end">
                       {user?.email && (
-                        <section className="mx-auto  grid grid-cols-3 lg:grid-cols-3 gap-3 text-sm font-medium">
+                        <section className="grid grid-cols-3 lg:grid-cols-3 gap-3 text-sm font-medium">
                           <Link
                             to={`/bookDetails/${_id}`}
                             className="py-2 bg-gray-200 text-purple-800 font-bold rounded-sm my-2 px-1"
@@ -130,13 +230,13 @@ const ALlBook = () => {
                           </Link>
                           <button
                             onClick={() => handleAddBook(book)}
-                            className="py-2 bg-gray-200 text-purple-800 font-bold  my-2 px-1 rounded-sm"
+                            className="py-2 bg-gray-200 text-purple-800 font-bold my-2 px-1 rounded-sm"
                           >
                             Add Reading
                           </button>
                           <button
                             onClick={() => handleAddReaded(book)}
-                            className="py-2 bg-gray-200 text-purple-800 font-bold  rounded-sm my-2 px-1"
+                            className="py-2 bg-gray-200 text-purple-800 font-bold rounded-sm my-2 px-1"
                           >
                             Add Finished
                           </button>
