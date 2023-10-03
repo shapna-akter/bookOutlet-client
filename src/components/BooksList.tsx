@@ -34,7 +34,7 @@ const Books = () => {
 
   return (
     <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-center">
-      <h2 className="mt-1 text-3xl font-bold font-serif">all New Books</h2>
+      <h2 className="mt-1 text-3xl font-bold font-serif">All New Books</h2>
 
       {isLoading && (
         <div className="mt-1 text-xl font-bold font-serif text-center flex justify-center items-center">

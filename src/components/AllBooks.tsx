@@ -48,7 +48,7 @@ const ALlBook = () => {
 
   return (
     <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-center">
-      <h2 className="mt-1 text-3xl font-bold font-serif">Our All Book Store</h2>
+      <h2 className="mt-1 text-3xl font-bold font-serif">Our All Book Outlet</h2>
 
       <section className="md:flex justify-between">
         <div className="flex justify-center items-center">
@@ -80,7 +80,7 @@ const ALlBook = () => {
               className="text-xl w-fit text-center font-bold bg-purple-800 text-slate-200 px-4 py-2 rounded-lg "
               to="/addBook"
             >
-              add new
+              Add new
             </Link>
           )}
         </div>
