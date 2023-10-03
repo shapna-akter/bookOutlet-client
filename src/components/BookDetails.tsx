@@ -100,7 +100,7 @@ const BookDetail = () => {
       <div className="card w-full bg-base-100 shadow-xl image-full rounded-none">
         <figure>
           <img
-            src="https://img.freepik.com/premium-photo/opened-book-with-flying-pages-butterflies-dark-backgroundgenerative-ai_391052-12859.jpg"
+            src="https://thumbs.dreamstime.com/b/open-old-hardcover-book-light-blue-background-open-old-hardcover-book-light-blue-background-166398262.jpg"
             alt="Book"
           />
         </figure>

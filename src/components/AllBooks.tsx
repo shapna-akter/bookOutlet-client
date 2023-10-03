@@ -104,7 +104,7 @@ const ALlBook = () => {
                 <div className="card bg-white shadow-xl image-full">
                   <figure>
                     <img
-                      src="https://img.freepik.com/premium-photo/opened-book-with-flying-pages-butterflies-dark-backgroundgenerative-ai_391052-12859.jpg"
+                      src="https://thumbs.dreamstime.com/b/open-old-hardcover-book-light-blue-background-open-old-hardcover-book-light-blue-background-166398262.jpg"
                       alt="Book"
                     />
                   </figure>

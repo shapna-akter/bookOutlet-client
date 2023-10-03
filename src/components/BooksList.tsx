@@ -51,7 +51,7 @@ const Books = () => {
                 <div className="card w-96 bg-base-100 shadow-xl image-full">
                   <figure>
                     <img
-                      src="https://thumbs.dreamstime.com/b/old-book-flying-letters-magic-light-background-bookshelf-library-ancient-books-as-symbol-knowledge-history-218640948.jpg"
+                      src="https://thumbs.dreamstime.com/b/open-old-hardcover-book-light-blue-background-open-old-hardcover-book-light-blue-background-166398262.jpg"
                       alt="Shoes"
                     />
                   </figure>
