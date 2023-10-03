@@ -49,9 +49,10 @@ const SignUp = () => {
   const passwordInput = document.getElementById("password") as HTMLInputElement;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black">
+    <div className="min-h-screen flex flex-col lg:flex-row lg:justify-evenly items-center justify-center bg-primary">
+      <img src="https://st4.depositphotos.com/3116407/23773/i/450/depositphotos_237733600-stock-photo-sign-concept-tablet.jpg" alt="signup image" />
       <div className="w-full max-w-md">
-        <h3 className="text-center font-bold text-4xl  text-slate-400 my-2 font-serif">
+        <h3 className="text-center font-bold text-4xl text-slate-400 my-2 font-serif">
           Sign Up
         </h3>
         <form
@@ -66,7 +67,7 @@ const SignUp = () => {
               Your Name
             </label>
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
                 errors.name ? "border-red-500" : ""
               }`}
               type="text"
@@ -88,7 +89,7 @@ const SignUp = () => {
               Gender
             </label>
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
                 errors.name ? "border-red-500" : ""
               }`}
               type="text"
@@ -108,7 +109,7 @@ const SignUp = () => {
               Date of birth
             </label>
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
                 errors.name ? "border-red-500" : ""
               }`}
               type="date"
@@ -129,7 +130,7 @@ const SignUp = () => {
               Email
             </label>
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
                 errors.email ? "border-red-500" : ""
               }`}
               type="email"
@@ -152,7 +153,7 @@ const SignUp = () => {
               Password
             </label>
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
                 errors.password ? "border-red-500" : ""
               }`}
               type="password"

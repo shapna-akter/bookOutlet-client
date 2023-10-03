@@ -86,8 +86,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav
-    >
+    <nav>
       <div className="px-4 sm:px-6 lg:px-10 bg-info font-bold">
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -157,7 +156,7 @@ const Navbar = () => {
                   className="inline-flex items-center"
                 >
                   <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase ">
-                    Books stored
+                    BookOutlet
                   </span>
                 </Link>
               </div>

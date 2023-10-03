@@ -40,9 +40,9 @@ const Login = () => {
   }, [user]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black">
+    <div className="min-h-screen flex items-center justify-center bg-primary">
       <div className="w-full max-w-md">
-        <h3 className="text-center font-bold text-4xl  my-2 font-serif">
+        <h3 className="text-center font-bold text-4xl text-slate-400 my-2 font-serif">
           Log In
         </h3>
         <form
@@ -57,7 +57,7 @@ const Login = () => {
               Email
             </label>
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
                 errors.email ? "border-red-500" : ""
               }`}
               type="email"
@@ -80,7 +80,7 @@ const Login = () => {
               Password
             </label>
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
                 errors.password ? "border-red-500" : ""
               }`}
               type="password"
