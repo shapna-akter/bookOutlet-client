@@ -48,7 +48,7 @@ const Navbar = () => {
           >
             Reading
           </Link>
-
+  
           <Link
             to="/finished"
             onClick={closeMenu}
@@ -57,26 +57,10 @@ const Navbar = () => {
             Finished
           </Link>
         </>
-      ) : (
-        <>
-          <Link
-            to="/signup"
-            onClick={closeMenu}
-            className="block mt-4 lg:inline-block lg:mt-0 text-black-600 mr-8"
-          >
-            SignUp
-          </Link>
-          <Link
-            to="/login"
-            onClick={closeMenu}
-            className="block mt-4 lg:inline-block lg:mt-0 text-black-600 mr-8"
-          >
-            Login
-          </Link>
-        </>
-      )}
+      ) : null}
     </React.Fragment>
   );
+  
 
   return (
       <div className="navbar bg-info">
