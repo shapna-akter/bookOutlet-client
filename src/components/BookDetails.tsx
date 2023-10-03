@@ -172,17 +172,17 @@ const BookDetail = () => {
 
                 <section className="block lg:flex justify-around max-w-m mx-auto  p-8 bg-white shadow-md rounded-lg ">
                   <form className="" onSubmit={handleSubmit}>
-                    <p className="text-md text-center font-bold mb-4 text-black">
+                    <p className="text-md text-center font-bold mb-4 text-primary">
                       Add Review
                     </p>
                     <textarea
-                      className="min-h-[100] border-2 outline-none w-full text-center font-mono  tex-2xl"
+                      className="min-h-[100] border-2 outline-none w-full text-center tex-2xl text-neutral"
                       onChange={handleChange}
                       value={inputValue}
                     />
                     <button
                       type="submit"
-                      className="border w-full text-purple-800 font-bold border-purple-800 rounded py-2 px-4 mr-2 "
+                      className="border w-full text-info font-bold border-info rounded py-2 px-4 mr-2 "
                     >
                       Add Review
                     </button>
