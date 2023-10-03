@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import { usePostBookMutation } from "../redux/features/book/bookApi";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { setNotification } from "../redux/notification/notificationSlice";
+import { useNavigate } from "react-router-dom";
 export interface IBook {
   title: string;
   author: string;
@@ -15,6 +16,7 @@ export interface IBook {
 const AddBook = () => {
   const { user } = useAppSelector((state) => state?.user);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const [addBook, { isLoading, error }] = usePostBookMutation();
 
@@ -69,146 +71,138 @@ const AddBook = () => {
   if (error) {
     console.log(error);
   }
+  const handleCancel = () => {
+    navigate(-1);
+  };
   return (
-    <div className="">
-      <div className="card w-full bg-base-100 shadow-xl image-full rounded-none">
-        <figure>
-          <img
-            src="https://media.istockphoto.com/id/1460007178/photo/library-books-on-table-and-background-for-studying-learning-and-research-in-education-school.jpg?b=1&s=612x612&w=0&k=20&c=MVxSlUIASeNYDHm7MuYnLLZzu3Edx_onlyG3sSLWFGc="
-            alt="New book image"
-          />
-        </figure>
-        <div className="card-body">
-          <div className="min-h-screen">
-            <h3 className="text-center font-bold text-4xl my-2 font-serif ">
-              Add A Book
-            </h3>
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="max-w-sm mx-auto  border-2 p-2"
+    <div className="min-h-screen m-12">
+      <h3 className="text-center text-primary font-bold text-4xl my-2 font-serif ">
+        Add A Book
+      </h3>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="mb-4">
+            <label
+              className="block text-white-700 text-sm font-bold mb-2"
+              htmlFor="title"
             >
-              <div className="mb-4">
-                <label
-                  className="block text-white-700 text-sm font-bold mb-2"
-                  htmlFor="title"
-                >
-                  Title:
-                </label>
-                <input
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                    errors.title ? "border-red-500" : ""
-                  }`}
-                  type="text"
-                  placeholder="Enter product title"
-                  id="title"
-                  {...register("title", { required: "title is required" })}
-                />
-                {errors.title && (
-                  <p className="text-red-500 text-xs italic">
-                    Book title is required
-                  </p>
-                )}
-              </div>
-
-              <div className="mb-4">
-                <label
-                  className="block text-white-700 text-sm font-bold mb-2"
-                  htmlFor="author"
-                >
-                  Author:
-                </label>
-                <input
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                    errors.author ? "border-red-500" : ""
-                  }`}
-                  type="text"
-                  placeholder="Enter author name"
-                  id="author"
-                  {...register("author", { required: "author is required" })}
-                />
-                {errors.author && (
-                  <p className="text-red-500 text-xs italic">
-                    Author name is required
-                  </p>
-                )}
-              </div>
-
-              <div className="mb-4">
-                <label
-                  className="block text-white-700 text-sm font-bold mb-2"
-                  htmlFor="genre"
-                >
-                  Genre:
-                </label>
-                <input
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                    errors.genre ? "border-red-500" : ""
-                  }`}
-                  type="text"
-                  placeholder="Enter product genre"
-                  id="genre"
-                  {...register("genre", { required: "genre is required" })}
-                />
-                {errors.genre && (
-                  <p className="text-red-500 text-xs italic">
-                    Book genre is required
-                  </p>
-                )}
-              </div>
-
-              <div className="mb-4">
-                <label
-                  className="block text-white-700 text-sm font-bold mb-2"
-                  htmlFor="publicationDate"
-                >
-                  Publication Date
-                </label>
-                <input
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                    errors.publicationDate ? "border-red-500" : ""
-                  }`}
-                  type="date"
-                  placeholder="Select publication date"
-                  id="publicationDate"
-                  {...register("publicationDate", {
-                    required: "publicationDate is required",
-                  })}
-                />
-                {errors.publicationDate && (
-                  <p className="text-red-500 text-xs italic">
-                    Publication date is required
-                  </p>
-                )}
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-white-700 text-sm font-bold mb-2"
-                  htmlFor="publicationDate"
-                >
-                  Price
-                </label>
-                <input
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                    errors.publicationDate ? "border-red-500" : ""
-                  }`}
-                  type="number"
-                  placeholder="Select publication date"
-                  id="publicationDate"
-                />
-              </div>
-
-              <div className="flex items-center justify-center">
-                <button
-                  className="bg-info text-center hover:bg-primary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="submit"
-                >
-                  Add Book
-                </button>
-              </div>
-            </form>
+              Title:
+            </label>
+            <input
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
+                errors.title ? "border-red-500" : ""
+              }`}
+              type="text"
+              placeholder="Enter product title"
+              id="title"
+              {...register("title", { required: "title is required" })}
+            />
+            {errors.title && (
+              <p className="text-red-500 text-xs italic">
+                Book title is required
+              </p>
+            )}
+          </div>
+          <div className="mb-4">
+            <label
+              className="block text-white-700 text-sm font-bold mb-2"
+              htmlFor="author"
+            >
+              Author:
+            </label>
+            <input
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
+                errors.author ? "border-red-500" : ""
+              }`}
+              type="text"
+              placeholder="Enter author name"
+              id="author"
+              {...register("author", { required: "author is required" })}
+            />
+            {errors.author && (
+              <p className="text-red-500 text-xs italic">
+                Author name is required
+              </p>
+            )}
+          </div>
+          <div className="mb-4">
+            <label
+              className="block text-white-700 text-sm font-bold mb-2"
+              htmlFor="genre"
+            >
+              Genre:
+            </label>
+            <input
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
+                errors.genre ? "border-red-500" : ""
+              }`}
+              type="text"
+              placeholder="Enter product genre"
+              id="genre"
+              {...register("genre", { required: "genre is required" })}
+            />
+            {errors.genre && (
+              <p className="text-red-500 text-xs italic">
+                Book genre is required
+              </p>
+            )}
+          </div>
+          <div className="mb-4">
+            <label
+              className="block text-white-700 text-sm font-bold mb-2"
+              htmlFor="publicationDate"
+            >
+              Publication Date
+            </label>
+            <input
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
+                errors.publicationDate ? "border-red-500" : ""
+              }`}
+              type="date"
+              placeholder="Select publication date"
+              id="publicationDate"
+              {...register("publicationDate", {
+                required: "publicationDate is required",
+              })}
+            />
+            {errors.publicationDate && (
+              <p className="text-red-500 text-xs italic">
+                Publication date is required
+              </p>
+            )}
+          </div>
+          <div className="mb-4">
+            <label
+              className="block text-white-700 text-sm font-bold mb-2"
+              htmlFor="publicationDate"
+            >
+              Price
+            </label>
+            <input
+              className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
+                errors.publicationDate ? "border-red-500" : ""
+              }`}
+              type="number"
+              placeholder="Select publication date"
+              id="publicationDate"
+            />
           </div>
         </div>
-      </div>
+
+        <div className="flex justify-end gap-4 mt-6 lg:mt-12">
+          <input
+            type="button"
+            value="Cancel"
+            className="text-base-100 bg-primary rounded-lg px-4 2xl:px-12 py-2 font-medium cursor-pointer hover:bg-primary-dark"
+            onClick={handleCancel}
+          />
+          <input
+            type="submit"
+            value="Add Book"
+            className="text-base-100 bg-primary rounded-lg px-4 2xl:px-12 py-2 font-medium cursor-pointer hover:bg-primary-dark"
+          />
+        </div>
+      </form>
     </div>
   );
 };
