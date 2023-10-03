@@ -152,7 +152,7 @@ const AddBook = () => {
               className="block text-white-700 text-sm font-bold mb-2"
               htmlFor="publicationDate"
             >
-              Publication Date
+              Publication Date:
             </label>
             <input
               className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
@@ -176,7 +176,7 @@ const AddBook = () => {
               className="block text-white-700 text-sm font-bold mb-2"
               htmlFor="publicationDate"
             >
-              Price
+              Price:
             </label>
             <input
               className={`border-2 border-info p-3 rounded-lg cursor-pointer w-full ${
