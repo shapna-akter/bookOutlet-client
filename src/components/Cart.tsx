@@ -48,7 +48,7 @@ const Cart = () => {
             <div className="border-l pl-5 flex flex-col justify-between gap-3">
               <button
                 onClick={() => handleRemoveBook(book)}
-                className="bg-purple-800 hover:bg-purple-500 text-white font-bold"
+                className="bg-info hover:bg-primary text-white font-bold"
               >
                 Remove
               </button>

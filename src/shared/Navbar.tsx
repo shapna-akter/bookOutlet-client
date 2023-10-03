@@ -2,8 +2,8 @@ import { signOut } from "firebase/auth";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../lib/firebase.config";
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { logout } from "../redux/features/users/userSlice";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const dispatch = useAppDispatch();
@@ -91,7 +91,7 @@ const Navbar = () => {
     //   isMenuOpen ? "" : ""
     // }`}
     >
-      <div className="px-4 sm:px-6 lg:px-10 bg-purple-800 font-bold">
+      <div className="px-4 sm:px-6 lg:px-10 bg-info font-bold">
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link

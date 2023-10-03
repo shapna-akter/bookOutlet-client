@@ -2,11 +2,11 @@
 // import main_api from '../shared/mainAPi';
 // import { Link } from 'react-router-dom';
 import { Link } from "react-router-dom";
-import { useGetBookQuery } from "../redux/features/book/bookApi";
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { addToWishlist } from "../redux/features/whislist/whislistSlice";
-import { addToReaded } from "../redux/features/readedBook/readedBookSlice";
 import Swal from "sweetalert2";
+import { useGetBookQuery } from "../redux/features/book/bookApi";
+import { addToReaded } from "../redux/features/readedBook/readedBookSlice";
+import { addToWishlist } from "../redux/features/whislist/whislistSlice";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 
 interface IBook {
   _id?: string | any;
@@ -99,7 +99,7 @@ const Books = () => {
       <div className="mt-10">
         <Link
           to="/allBook"
-          className="block w-96 mt-10 lg:inline-block lg:mt-0 text-gray-100  mr-8 p-2 bg-purple-800 hover:text-purple-800 hover:bg-gray-300 hover:shadow-2xl hover:scale-110  mx-auto  font-bold text-xl "
+          className="block w-96 mt-10 lg:inline-block lg:mt-0 text-gray-100  mr-8 p-2 bg-info hover:text-purple-800 hover:bg-gray-300 hover:shadow-2xl hover:scale-110  mx-auto  font-bold text-xl "
         >
           See All
         </Link>

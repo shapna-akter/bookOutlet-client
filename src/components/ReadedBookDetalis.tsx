@@ -2,7 +2,6 @@
 import {
   // addToReaded,
   removeFromReaded,
-  // removeOneReaded,
 } from "../redux/features/readedBook/readedBookSlice";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 
@@ -48,7 +47,7 @@ const ReadedBook = () => {
               <label></label>
               <button
                 onClick={() => handleRemoveBook(book)}
-                className="bg-purple-800 hover:bg-purple-500 text-white font-bold"
+                className="bg-info hover:bg-primary text-white font-bold"
               >
                 remove
               </button>

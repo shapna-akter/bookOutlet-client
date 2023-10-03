@@ -1,17 +1,17 @@
+import { ChangeEvent, FormEvent, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 import {
   useDeleteBookMutation,
   useGetReviewQuery,
   useGetSingleBookQuery,
   usePostReviewMutation,
 } from "../redux/features/book/bookApi";
+import { addToReaded } from "../redux/features/readedBook/readedBookSlice";
+import { addToWishlist } from "../redux/features/whislist/whislistSlice";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import Swal from "sweetalert2";
-import { useState, ChangeEvent, FormEvent } from "react";
 import { setNotification } from "../redux/notification/notificationSlice";
 import { IBook } from "./AllBooks";
-import { addToWishlist } from "../redux/features/whislist/whislistSlice";
-import { addToReaded } from "../redux/features/readedBook/readedBookSlice";
 
 const BookDetail = () => {
   const { id } = useParams();
@@ -157,13 +157,13 @@ const BookDetail = () => {
                   <section className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 text-sm font-medium">
                     <button
                       onClick={() => handleAddBook(book)}
-                      className="py-2 bg-purple-800 rounded-sm mt-2 px-1"
+                      className="py-2 bg-info rounded-sm mt-2 px-1"
                     >
                       Add Reading
                     </button>
                     <button
                       onClick={() => handleAddReaded(book)}
-                      className="py-2 bg-purple-800 rounded-sm mt-2 px-1 "
+                      className="py-2 bg-info rounded-sm mt-2 px-1 "
                     >
                       Add Finished
                     </button>

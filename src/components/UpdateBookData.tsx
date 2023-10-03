@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 // import { useAppDispatch } from "../redux/hooks";
+import { useForm } from "react-hook-form";
 import {
   useGetSingleBookQuery,
   useUpdateBookMutation,
 } from "../redux/features/book/bookApi";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { useForm } from "react-hook-form";
 
 import Swal from "sweetalert2";
 import { setNotification } from "../redux/notification/notificationSlice";
@@ -157,7 +157,7 @@ const UpdateBook = () => {
 
                 <div className="flex items-center justify-center">
                   <button
-                    className="bg-purple-800 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    className="bg-info hover:bg-primary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                     type="submit"
                   >
                     Update

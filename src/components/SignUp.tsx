@@ -1,9 +1,9 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { createUser } from "../redux/features/users/userSlice";
 import { toast } from "react-toastify";
-import { useEffect } from "react";
+import { createUser } from "../redux/features/users/userSlice";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 
 interface ISignupFormData {
   name?: string;
@@ -187,7 +187,7 @@ const SignUp = () => {
           </h2>
           <div className="flex items-center justify-between">
             <button
-              className="bg-purple-800  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-info  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Sign Up

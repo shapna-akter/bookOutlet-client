@@ -1,10 +1,10 @@
+import { ChangeEvent, useState } from "react";
 import { Link } from "react-router-dom";
-import { useGetAllBookQuery } from "../redux/features/book/bookApi";
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { useState, ChangeEvent } from "react";
-import { addToWishlist } from "../redux/features/whislist/whislistSlice";
 import Swal from "sweetalert2";
+import { useGetAllBookQuery } from "../redux/features/book/bookApi";
 import { addToReaded } from "../redux/features/readedBook/readedBookSlice";
+import { addToWishlist } from "../redux/features/whislist/whislistSlice";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 
 export interface IBook {
   _id?: string | any;
@@ -48,7 +48,9 @@ const ALlBook = () => {
 
   return (
     <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-center">
-      <h2 className="mt-1 text-3xl font-bold font-serif">Our All Book Outlet</h2>
+      <h2 className="mt-1 text-3xl font-bold font-serif">
+        Our All Book Outlet
+      </h2>
 
       <section className="md:flex justify-between">
         <div className="flex justify-center items-center">
@@ -77,7 +79,7 @@ const ALlBook = () => {
         <div className="flex justify-center items-center">
           {user?.email && (
             <Link
-              className="text-xl w-fit text-center font-bold bg-purple-800 text-slate-200 px-4 py-2 rounded-lg "
+              className="text-xl w-fit text-center font-bold bg-info text-slate-200 px-4 py-2 rounded-lg "
               to="/addBook"
             >
               Add new

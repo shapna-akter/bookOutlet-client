@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { usePostBookMutation } from "../redux/features/book/bookApi";
 import Swal from "sweetalert2";
+import { usePostBookMutation } from "../redux/features/book/bookApi";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { setNotification } from "../redux/notification/notificationSlice";
 export interface IBook {
   title: string;
@@ -199,7 +199,7 @@ const AddBook = () => {
 
               <div className="flex items-center justify-center">
                 <button
-                  className="bg-purple-800 text-center hover:bg-purple-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-info text-center hover:bg-primary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
                 >
                   Add Book

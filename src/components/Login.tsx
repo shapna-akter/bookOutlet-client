@@ -1,9 +1,9 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { loginUser } from "../redux/features/users/userSlice";
 import { toast } from "react-toastify";
-import { useEffect } from "react";
+import { loginUser } from "../redux/features/users/userSlice";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 interface ILoginFormData {
   name?: string;
   email: string;
@@ -119,7 +119,7 @@ const Login = () => {
 
           <div className="flex items-center justify-between">
             <button
-              className="bg-purple-800  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-info  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Login
