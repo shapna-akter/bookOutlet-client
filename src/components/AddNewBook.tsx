@@ -74,8 +74,8 @@ const AddBook = () => {
       <div className="card w-full bg-base-100 shadow-xl image-full rounded-none">
         <figure>
           <img
-            src="https://thumbs.dreamstime.com/b/old-book-flying-letters-magic-light-background-bookshelf-library-ancient-books-as-symbol-knowledge-history-218640948.jpg"
-            alt="Shoes"
+            src="https://media.istockphoto.com/id/1460007178/photo/library-books-on-table-and-background-for-studying-learning-and-research-in-education-school.jpg?b=1&s=612x612&w=0&k=20&c=MVxSlUIASeNYDHm7MuYnLLZzu3Edx_onlyG3sSLWFGc="
+            alt="New book image"
           />
         </figure>
         <div className="card-body">
