@@ -193,13 +193,13 @@ const AddBook = () => {
           <input
             type="button"
             value="Cancel"
-            className="text-base-100 bg-primary rounded-lg px-4 2xl:px-12 py-2 font-medium cursor-pointer hover:bg-primary-dark"
+            className="text-base-100 bg-primary rounded-lg px-4 2xl:px-12 py-2 font-medium cursor-pointer hover:bg-neutral"
             onClick={handleCancel}
           />
           <input
             type="submit"
             value="Add Book"
-            className="text-base-100 bg-primary rounded-lg px-4 2xl:px-12 py-2 font-medium cursor-pointer hover:bg-primary-dark"
+            className="text-base-100 bg-primary rounded-lg px-4 2xl:px-12 py-2 font-medium cursor-pointer hover:bg-neutral"
           />
         </div>
       </form>
