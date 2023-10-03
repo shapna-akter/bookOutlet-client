@@ -59,9 +59,9 @@ const Navbar = () => {
           <Link
             to="/login"
             onClick={handleLogout}
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 mr-8"
+            className="btn btn-primary btn-sm text-white capitalize"
           >
-            logout
+            Logout
           </Link>
         </>
       ) : (
@@ -87,9 +87,6 @@ const Navbar = () => {
 
   return (
     <nav
-    // className={`bg-slate-5 shadow-lg fixed w-full top-0 backdrop-blur-sm  ${
-    //   isMenuOpen ? "" : ""
-    // }`}
     >
       <div className="px-4 sm:px-6 lg:px-10 bg-info font-bold">
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
