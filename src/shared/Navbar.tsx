@@ -112,20 +112,20 @@ const Navbar = () => {
             </>
           ) : (
             <>
+              <div className="text-md text-primary flex gap-4 font-semibold">
               <Link
                 to="/signup"
-                onClick={closeMenu}
-                className="block mt-4 lg:inline-block lg:mt-0 text-black-600 mr-8"
+                onClick={closeMenu}           
               >
                 SignUp
               </Link>
               <Link
                 to="/login"
                 onClick={closeMenu}
-                className="block mt-4 lg:inline-block lg:mt-0 text-black-600 mr-8"
               >
                 Login
               </Link>
+              </div>
             </>
           )}
         </div>
